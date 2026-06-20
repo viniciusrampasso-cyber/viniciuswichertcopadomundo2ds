@@ -253,3 +253,50 @@ cards.forEach(card => {
 ```
 ```html
 ```html
+```css
+/* BARRA SUPERIOR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:60px;
+
+    background:#151515;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:1000;
+
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+/* NOME DO SITE */
+
+.logo{
+    color:white;
+    text-decoration:none;
+    font-size:30px;
+    font-weight:bold;
+    letter-spacing:2px;
+
+    transition:all .3s ease;
+}
+
+.logo:hover{
+    color:gold;
+
+    transform:scale(1.08);
+
+    text-shadow:
+        0 0 10px gold,
+        0 0 20px gold;
+}
+
+.logo:active{
+    transform:scale(.95);
+}
+```
