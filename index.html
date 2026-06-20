@@ -1,12 +1,12 @@
-
 ```html
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Copas do Mundo</title>
+<title>WorldCup Hub</title>
 
 <style>
 
@@ -21,239 +21,6 @@ body{
     background:#101010;
 }
 
-/* BARRA LATERAL */
-
-.sidebar{
-    position:fixed;
-    left:0;
-    top:0;
-    width:260px;
-    height:100vh;
-    overflow-y:auto;
-    background:#151515;
-    padding:15px;
-}
-
-/* CARD DOS ANOS */
-
-.copa{
-    width:100%;
-    height:90px;
-
-    margin-bottom:12px;
-
-    border-radius:12px;
-
-    background-size:cover;
-    background-position:center;
-
-    position:relative;
-
-    cursor:pointer;
-
-    overflow:hidden;
-
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease,
-        filter .3s ease;
-}
-
-/* CAMADA ESCURA */
-
-.copa::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.45);
-}
-
-/* TEXTO */
-
-.copa span{
-    position:absolute;
-    left:15px;
-    bottom:15px;
-
-    z-index:2;
-
-    color:white;
-    font-size:24px;
-    font-weight:bold;
-}
-
-/* ANIMAÇÃO HOVER */
-
-.copa:hover{
-    transform:scale(1.05);
-
-    filter:brightness(1.15);
-
-    box-shadow:
-        0 0 15px rgba(255,255,255,.3),
-        0 0 30px rgba(255,255,255,.2);
-}
-
-/* ANIMAÇÃO CLICK */
-
-.copa:active{
-    transform:scale(.95);
-}
-
-/* CARD SELECIONADO */
-
-.copa.selecionado{
-    border:3px solid gold;
-
-    box-shadow:
-        0 0 20px gold,
-        0 0 40px rgba(255,215,0,.5);
-}
-
-</style>
-</head>
-<body>
-
-<div class="sidebar">
-
-<div class="copa"
-style="background-image:url('img/1930.jpg')">
-<span>1930</span>
-</div>
-
-<div class="copa"
-style="background-image:url('img/1934.jpg')">
-<span>1934</span>
-</div>
-
-<div class="copa"
-style="background-image:url('img/1938.jpg')">
-<span>1938</span>
-</div>
-
-<div class="copa"
-style="background-image:url('img/1950.jpg')">
-<span>1950</span>
-</div>
-
-<div class="copa"
-style="background-image:url('img/1954.jpg')">
-<span>1954</span>
-</div>
-
-<div class="copa"
-style="background-image:url('img/1958.jpg')">
-<span>1958</span>
-</div>
-
-<div class="copa"
-style="background-image:url('img/1962.jpg')">
-<span>1962</span>
-</div>
-
-<div class="copa"
-style="background-image:url('img/1966.jpg')">
-<span>1966</span>
-</div>
-
-<div class="copa"
-style="background-image:url('img/1970.jpg')">
-<span>1970</span>
-</div>
-
-<div class="copa"
-style="background-image:url('img/1974.jpg')">
-<span>1974</span>
-</div>
-
-<div class="copa"
-style="background-image:url('img/1978.jpg')">
-<span>1978</span>
-</div>
-
-<div class="copa"
-style="background-image:url('img/1982.jpg')">
-<span>1982</span>
-</div>
-
-<div class="copa"
-style="background-image:url('img/1986.jpg')">
-<span>1986</span>
-</div>
-
-<div class="copa"
-style="background-image:url('img/1990.jpg')">
-<span>1990</span>
-</div>
-
-<div class="copa"
-style="background-image:url('img/1994.jpg')">
-<span>1994</span>
-</div>
-
-<div class="copa"
-style="background-image:url('img/1998.jpg')">
-<span>1998</span>
-</div>
-
-<div class="copa"
-style="background-image:url('img/2002.jpg')">
-<span>2002</span>
-</div>
-
-<div class="copa"
-style="background-image:url('img/2006.jpg')">
-<span>2006</span>
-</div>
-
-<div class="copa"
-style="background-image:url('img/2010.jpg')">
-<span>2010</span>
-</div>
-
-<div class="copa"
-style="background-image:url('img/2014.jpg')">
-<span>2014</span>
-</div>
-
-<div class="copa"
-style="background-image:url('img/2018.jpg')">
-<span>2018</span>
-</div>
-
-<div class="copa"
-style="background-image:url('img/2022.jpg')">
-<span>2022</span>
-</div>
-
-</div>
-
-<script>
-
-const cards = document.querySelectorAll(".copa");
-
-cards.forEach(card => {
-
-    card.addEventListener("click", () => {
-
-        cards.forEach(c =>
-            c.classList.remove("selecionado")
-        );
-
-        card.classList.add("selecionado");
-
-    });
-
-});
-
-</script>
-
-</body>
-</html>
-```
-```html
-```html
-```css
 /* BARRA SUPERIOR */
 
 .navbar{
@@ -269,12 +36,12 @@ cards.forEach(card => {
     justify-content:center;
     align-items:center;
 
-    z-index:1000;
-
     border-bottom:1px solid rgba(255,255,255,.1);
+
+    z-index:1000;
 }
 
-/* NOME DO SITE */
+/* LOGO */
 
 .logo{
     color:white;
@@ -299,4 +66,219 @@ cards.forEach(card => {
 .logo:active{
     transform:scale(.95);
 }
+
+/* BARRA LATERAL */
+
+.sidebar{
+    position:fixed;
+
+    top:60px;
+    left:0;
+
+    width:260px;
+
+    height:calc(100vh - 60px);
+
+    overflow-y:auto;
+
+    background:#151515;
+
+    padding:15px;
+}
+
+/* CARDS DAS COPAS */
+
+.copa{
+    width:100%;
+    height:90px;
+
+    margin-bottom:12px;
+
+    border-radius:12px;
+
+    background-size:cover;
+    background-position:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        filter .3s ease;
+}
+
+.copa::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+}
+
+.copa span{
+    position:absolute;
+
+    left:15px;
+    bottom:15px;
+
+    color:white;
+
+    font-size:24px;
+    font-weight:bold;
+
+    z-index:2;
+}
+
+.copa:hover{
+    transform:scale(1.05);
+
+    filter:brightness(1.15);
+
+    box-shadow:
+        0 0 15px rgba(255,255,255,.3),
+        0 0 30px rgba(255,255,255,.2);
+}
+
+.copa:active{
+    transform:scale(.95);
+}
+
+.copa.selecionado{
+    border:3px solid gold;
+
+    box-shadow:
+        0 0 20px gold,
+        0 0 40px rgba(255,215,0,.5);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <a href="index.html" class="logo">
+        WorldCup Hub
+    </a>
+</nav>
+
+<div class="sidebar">
+
+<div class="copa" style="background-image:url('img/1930.jpg')">
+<span>1930</span>
+</div>
+
+<div class="copa" style="background-image:url('img/1934.jpg')">
+<span>1934</span>
+</div>
+
+<div class="copa" style="background-image:url('img/1938.jpg')">
+<span>1938</span>
+</div>
+
+<div class="copa" style="background-image:url('img/1950.jpg')">
+<span>1950</span>
+</div>
+
+<div class="copa" style="background-image:url('img/1954.jpg')">
+<span>1954</span>
+</div>
+
+<div class="copa" style="background-image:url('img/1958.jpg')">
+<span>1958</span>
+</div>
+
+<div class="copa" style="background-image:url('img/1962.jpg')">
+<span>1962</span>
+</div>
+
+<div class="copa" style="background-image:url('img/1966.jpg')">
+<span>1966</span>
+</div>
+
+<div class="copa" style="background-image:url('img/1970.jpg')">
+<span>1970</span>
+</div>
+
+<div class="copa" style="background-image:url('img/1974.jpg')">
+<span>1974</span>
+</div>
+
+<div class="copa" style="background-image:url('img/1978.jpg')">
+<span>1978</span>
+</div>
+
+<div class="copa" style="background-image:url('img/1982.jpg')">
+<span>1982</span>
+</div>
+
+<div class="copa" style="background-image:url('img/1986.jpg')">
+<span>1986</span>
+</div>
+
+<div class="copa" style="background-image:url('img/1990.jpg')">
+<span>1990</span>
+</div>
+
+<div class="copa" style="background-image:url('img/1994.jpg')">
+<span>1994</span>
+</div>
+
+<div class="copa" style="background-image:url('img/1998.jpg')">
+<span>1998</span>
+</div>
+
+<div class="copa" style="background-image:url('img/2002.jpg')">
+<span>2002</span>
+</div>
+
+<div class="copa" style="background-image:url('img/2006.jpg')">
+<span>2006</span>
+</div>
+
+<div class="copa" style="background-image:url('img/2010.jpg')">
+<span>2010</span>
+</div>
+
+<div class="copa" style="background-image:url('img/2014.jpg')">
+<span>2014</span>
+</div>
+
+<div class="copa" style="background-image:url('img/2018.jpg')">
+<span>2018</span>
+</div>
+
+<div class="copa" style="background-image:url('img/2022.jpg')">
+<span>2022</span>
+</div>
+
+</div>
+
+<script>
+
+const cards = document.querySelectorAll(".copa");
+
+cards.forEach(card => {
+
+    card.addEventListener("click", () => {
+
+        cards.forEach(c => {
+            c.classList.remove("selecionado");
+        });
+
+        card.classList.add("selecionado");
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
 ```
+
