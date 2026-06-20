@@ -93,4 +93,121 @@ body{
 </body>
 </html>
 ```
+<div class="sidebar">
 
+    <div class="copa">1930</div>
+    <div class="copa">1934</div>
+    <div class="copa">1938</div>
+    <div class="copa">1950</div>
+    <div class="copa">1954</div>
+    <div class="copa">1958</div>
+    <div class="copa">1962</div>
+    <div class="copa">1966</div>
+    <div class="copa">1970</div>
+    <div class="copa">1974</div>
+    <div class="copa">1978</div>
+    <div class="copa">1982</div>
+    <div class="copa">1986</div>
+    <div class="copa">1990</div>
+    <div class="copa">1994</div>
+    <div class="copa">1998</div>
+    <div class="copa">2002</div>
+    <div class="copa">2006</div>
+    <div class="copa">2010</div>
+    <div class="copa">2014</div>
+    <div class="copa">2018</div>
+    <div class="copa">2022</div>
+
+</div>
+
+<style>
+
+/* BARRA LATERAL */
+
+.sidebar{
+    position:fixed;
+
+    top:65px;
+    left:0;
+
+    width:220px;
+    height:calc(100vh - 65px);
+
+    background:#151515;
+
+    padding:10px;
+
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+
+/* ANOS DAS COPAS */
+
+.copa{
+    height:32px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:8px;
+
+    background:#202020;
+
+    color:white;
+
+    font-size:16px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:
+        transform .25s ease,
+        color .25s ease,
+        box-shadow .25s ease;
+}
+
+.copa:hover{
+    color:gold;
+
+    transform:scale(1.05);
+
+    box-shadow:
+        0 0 10px gold;
+}
+
+.copa:active{
+    transform:scale(.95);
+}
+
+.copa.selecionado{
+    color:gold;
+
+    border:2px solid gold;
+
+    box-shadow:
+        0 0 15px gold;
+}
+
+</style>
+
+<script>
+
+const cards = document.querySelectorAll(".copa");
+
+cards.forEach(card => {
+
+    card.addEventListener("click", () => {
+
+        cards.forEach(c =>
+            c.classList.remove("selecionado")
+        );
+
+        card.classList.add("selecionado");
+
+    });
+
+});
+
+</script>
