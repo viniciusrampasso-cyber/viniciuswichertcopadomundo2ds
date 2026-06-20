@@ -1,1 +1,96 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WorldCup Hub</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#101010;
+}
+
+/* BARRA SUPERIOR */
+
+.navbar{
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:65px;
+
+    background:#151515;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-bottom:1px solid rgba(255,255,255,.1);
+
+    z-index:1000;
+}
+
+/* NOME DO SITE */
+
+.logo{
+    color:white;
+
+    text-decoration:none;
+
+    font-size:32px;
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+    transition:
+        transform .3s ease,
+        color .3s ease,
+        text-shadow .3s ease;
+}
+
+/* HOVER */
+
+.logo:hover{
+    color:gold;
+
+    transform:scale(1.08);
+
+    text-shadow:
+        0 0 10px gold,
+        0 0 20px gold;
+}
+
+/* CLICK */
+
+.logo:active{
+    transform:scale(.95);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <a href="index.html" class="logo">
+        WorldCup Hub
+    </a>
+</nav>
+
+</body>
+</html>
+```
 
