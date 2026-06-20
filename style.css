@@ -35,7 +35,7 @@ body{
 .logo{
     color:white;
     text-decoration:none;
-    font-size:28px;
+    font-size:30px;
     font-weight:bold;
     letter-spacing:2px;
 
@@ -46,8 +46,9 @@ body{
 }
 
 .logo:hover{
-    transform:scale(1.08);
     color:gold;
+
+    transform:scale(1.08);
 
     text-shadow:
         0 0 10px gold,
@@ -62,15 +63,17 @@ body{
 
 .sidebar{
     position:fixed;
-    top:60px;
+
     left:0;
+    top:60px;
 
     width:260px;
+
     height:calc(100vh - 60px);
 
-    background:#151515;
-
     overflow-y:auto;
+
+    background:#151515;
 
     padding:15px;
 }
@@ -90,15 +93,17 @@ body{
 
     position:relative;
 
-    overflow:hidden;
-
     cursor:pointer;
+
+    overflow:hidden;
 
     transition:
         transform .3s ease,
-        filter .3s ease,
-        box-shadow .3s ease;
+        box-shadow .3s ease,
+        filter .3s ease;
 }
+
+/* CAMADA ESCURA */
 
 .copa::before{
     content:"";
@@ -107,17 +112,21 @@ body{
     background:rgba(0,0,0,.45);
 }
 
+/* TEXTO DOS ANOS */
+
 .copa span{
     position:absolute;
     left:15px;
     bottom:15px;
 
+    z-index:2;
+
     color:white;
     font-size:24px;
     font-weight:bold;
-
-    z-index:2;
 }
+
+/* ANIMAÇÃO AO PASSAR O MOUSE */
 
 .copa:hover{
     transform:scale(1.05);
@@ -126,19 +135,22 @@ body{
 
     box-shadow:
         0 0 15px rgba(255,255,255,.3),
-        0 0 30px rgba(255,255,255,.15);
+        0 0 30px rgba(255,255,255,.2);
 }
+
+/* ANIMAÇÃO DE CLIQUE */
 
 .copa:active{
     transform:scale(.95);
 }
+
+/* ANO SELECIONADO */
 
 .copa.selecionado{
     border:3px solid gold;
 
     box-shadow:
         0 0 20px gold,
-        0 0 40px rgba(255,215,0,.4);
+        0 0 40px rgba(255,215,0,.5);
 }
 ```
-
