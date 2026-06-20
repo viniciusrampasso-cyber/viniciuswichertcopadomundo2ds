@@ -1,1 +1,144 @@
+```css
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#101010;
+}
+
+/* BARRA SUPERIOR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:60px;
+
+    background:#151515;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:1000;
+
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+/* NOME DO SITE */
+
+.logo{
+    color:white;
+    text-decoration:none;
+    font-size:28px;
+    font-weight:bold;
+    letter-spacing:2px;
+
+    transition:
+        transform .3s ease,
+        color .3s ease,
+        text-shadow .3s ease;
+}
+
+.logo:hover{
+    transform:scale(1.08);
+    color:gold;
+
+    text-shadow:
+        0 0 10px gold,
+        0 0 20px gold;
+}
+
+.logo:active{
+    transform:scale(.95);
+}
+
+/* BARRA LATERAL */
+
+.sidebar{
+    position:fixed;
+    top:60px;
+    left:0;
+
+    width:260px;
+    height:calc(100vh - 60px);
+
+    background:#151515;
+
+    overflow-y:auto;
+
+    padding:15px;
+}
+
+/* CARDS DOS ANOS */
+
+.copa{
+    width:100%;
+    height:90px;
+
+    margin-bottom:12px;
+
+    border-radius:12px;
+
+    background-size:cover;
+    background-position:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:
+        transform .3s ease,
+        filter .3s ease,
+        box-shadow .3s ease;
+}
+
+.copa::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
+
+.copa span{
+    position:absolute;
+    left:15px;
+    bottom:15px;
+
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+
+    z-index:2;
+}
+
+.copa:hover{
+    transform:scale(1.05);
+
+    filter:brightness(1.15);
+
+    box-shadow:
+        0 0 15px rgba(255,255,255,.3),
+        0 0 30px rgba(255,255,255,.15);
+}
+
+.copa:active{
+    transform:scale(.95);
+}
+
+.copa.selecionado{
+    border:3px solid gold;
+
+    box-shadow:
+        0 0 20px gold,
+        0 0 40px rgba(255,215,0,.4);
+}
+```
 
