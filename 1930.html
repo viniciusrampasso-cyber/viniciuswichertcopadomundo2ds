@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Copa do Mundo FIFA 1930</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
 
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">FIFA World Cup</span>
+      <h1 class="hero-title">1930</h1>
+      <p class="hero-subtitle">A primeira Copa do Mundo da história</p>
+      <div class="hero-location">🇺🇾 Uruguai · 13–30 de julho</div>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><span class="hstat-num">13</span><span class="hstat-label">Seleções</span></div>
+      <div class="hstat"><span class="hstat-num">18</span><span class="hstat-label">Partidas</span></div>
+      <div class="hstat"><span class="hstat-num">70</span><span class="hstat-label">Gols</span></div>
+      <div class="hstat"><span class="hstat-num">3.89</span><span class="hstat-label">Gols/jogo</span></div>
+    </div>
+  </header>
+
+  <!-- NAV TABS -->
+  <nav class="tab-nav" role="tablist">
+    <button class="tab-btn active" data-tab="grupos" role="tab" aria-selected="true">Grupos</button>
+    <button class="tab-btn" data-tab="semifinais" role="tab" aria-selected="false">Semifinais & Final</button>
+    <button class="tab-btn" data-tab="artilheiros" role="tab" aria-selected="false">Artilheiros</button>
+    <button class="tab-btn" data-tab="selecoes" role="tab" aria-selected="false">Seleções</button>
+    <button class="tab-btn" data-tab="historia" role="tab" aria-selected="false">História</button>
+    <button class="tab-btn" data-tab="curiosidades" role="tab" aria-selected="false">Curiosidades</button>
+  </nav>
+
+  <main class="container">
+
+    <!-- GRUPOS -->
+    <section id="grupos" class="tab-panel active" role="tabpanel">
+      <h2 class="section-title">Fase de Grupos</h2>
+      <div class="groups-grid" id="groups-grid"></div>
+    </section>
+
+    <!-- SEMIFINAIS & FINAL -->
+    <section id="semifinais" class="tab-panel" role="tabpanel">
+      <h2 class="section-title">Semifinais</h2>
+      <div class="knockouts-grid" id="knockouts-grid"></div>
+      <h2 class="section-title" style="margin-top:2.5rem;">Final — 30 de julho de 1930</h2>
+      <div class="final-card" id="final-card"></div>
+    </section>
+
+    <!-- ARTILHEIROS -->
+    <section id="artilheiros" class="tab-panel" role="tabpanel">
+      <h2 class="section-title">Artilheiros</h2>
+      <div class="scorers-list" id="scorers-list"></div>
+    </section>
+
+    <!-- SELEÇÕES -->
+    <section id="selecoes" class="tab-panel" role="tabpanel">
+      <h2 class="section-title">As 13 seleções</h2>
+      <div class="teams-grid" id="teams-grid"></div>
+    </section>
+
+    <!-- HISTÓRIA -->
+    <section id="historia" class="tab-panel" role="tabpanel">
+      <h2 class="section-title">Linha do tempo</h2>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <!-- CURIOSIDADES -->
+    <section id="curiosidades" class="tab-panel" role="tabpanel">
+      <h2 class="section-title">Curiosidades</h2>
+      <div class="curiosities-list" id="curiosities-list"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Dados históricos baseados nos registros oficiais da FIFA · Copa do Mundo 1930</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/tabs.js"></script>
+</body>
+</html>
